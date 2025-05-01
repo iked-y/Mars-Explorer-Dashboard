@@ -1,4 +1,4 @@
-# 🚀 Mars Explorer Dashboard
+# 🚀 What's the weather on Mars?
 
 This is a Dash-based web application that visualizes Mars exploration data using NASA's public APIs and static planetary datasets.
 
