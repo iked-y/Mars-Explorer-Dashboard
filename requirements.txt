@@ -1,0 +1,4 @@
+dash
+requests
+pillow
+plotly
