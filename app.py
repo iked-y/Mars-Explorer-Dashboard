@@ -29,7 +29,7 @@ mars_img_tmp = encode_image("./data/mars_spring_temperature_with_geoh.png")
 mars_img_p = encode_image("./data/mars_spring_surface-pressure_with_geoh.png")
 
 app.layout = html.Div([
-    html.H1("🌌 What's the weather on Mars?", style={
+    html.H1("🚀 What's the weather on Mars?", style={
         "textAlign": "center", 
         "padding": "20px", 
         "fontFamily": "Arial, sans-serif", 

@@ -18,7 +18,7 @@ This is a Dash-based web application that visualizes Mars exploration data using
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/mars-explorer-dashboard.git
+git clone https://github.com/iked-y/mars-explorer-dashboard.git
 cd mars-explorer-dashboard
 
 # (Optional) Create a virtual environment
