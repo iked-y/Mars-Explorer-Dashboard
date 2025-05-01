@@ -14,7 +14,9 @@ ROVER_NAME = 'curiosity'
 
 # アプリ初期化
 app = dash.Dash(__name__)
-app.title = "Mars Explorer Dashboard"
+# app.title = "Mars Explorer Dashboard"
+# app.title = "Mars Now"
+app.title = "What's the weather on Mars?"
 
 # 固定画像のbase64変換
 def encode_image(image_path):
@@ -27,7 +29,7 @@ mars_img_tmp = encode_image("./data/mars_spring_temperature_with_geoh.png")
 mars_img_p = encode_image("./data/mars_spring_surface-pressure_with_geoh.png")
 
 app.layout = html.Div([
-    html.H1("🌌 Mars Explorer Dashboard", style={
+    html.H1("🌌 What's the weather on Mars?", style={
         "textAlign": "center", 
         "padding": "20px", 
         "fontFamily": "Arial, sans-serif", 
