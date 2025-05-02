@@ -26,7 +26,7 @@ def encode_image(image_path):
 earth_img_tmp = encode_image("./data/earth_spring_temperature_with_topo.png")
 earth_img_p = encode_image("./data/earth_spring_mslp_with_topo.png")
 mars_img_tmp = encode_image("./data/mars_spring_temperature_with_geoh.png")
-mars_img_p = encode_image("./data/mars_spring_surface-pressure_with_geoh.png")
+mars_img_p = encode_image("./data/mars_spring_surface-pressure_areoid-corrected_with_geoh.png")
 
 app.layout = html.Div([
     html.H1("🚀 What's the weather on Mars?", style={
