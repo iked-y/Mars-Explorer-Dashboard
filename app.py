@@ -41,9 +41,34 @@ app.layout = html.Div([
     dcc.Tabs([
         dcc.Tab(label='🚀 About Mars', children=[
             html.Div([
+                html.H3("火星とは？", style={
+                        "textAlign": "top", 
+                        "marginBottom": "10px", 
+                        "fontSize": "24px", 
+                        "fontWeight": "bold"
+                }),
+                html.Div([
+                    html.Span("火星は地球の約半分の大きさで、重力は約3分の1です。", style={
+                        "display": "block",
+                        "fontWeight": "regular"
+                    }),
+                    html.Span("大気は非常に薄く、主に二酸化炭素で構成されています。雨や雪は降らず、水は主に極地や地下に氷の状態で存在します。", style={
+                        "display": "block",
+                        "fontWeight": "regular"
+                    }),
+                    html.Span("表面には巨大な火山(~10km)や深い渓谷が広がり、地形は地球とは大きく異なります。また、数火星年に一度、惑星全体を覆う大規模な砂嵐も発生します。", style={
+                        "display": "block",
+                        "fontWeight": "regular"
+                    })
+                ], style={
+                    "textAlign": "top", 
+                    "marginBottom": "10px", 
+                    "fontSize": "17px", 
+                }),
+
                 html.Div([
                     html.Div([
-                        html.H4("Topography Map", style={
+                        html.H4("Earth topography map", style={
                             "textAlign": "center", 
                             "marginBottom": "10px", 
                             "fontSize": "18px", 
@@ -60,7 +85,7 @@ app.layout = html.Div([
                     ], style={"flex": "1", "marginRight": "10px"}),
 
                     html.Div([
-                        html.H4("Mars", style={
+                        html.H4("Mars topography map", style={
                             "textAlign": "center", 
                             "marginBottom": "10px", 
                             "fontSize": "18px", 
@@ -89,13 +114,34 @@ app.layout = html.Div([
         
         dcc.Tab(label='📸 Curiosity/NAVCAM Images', children=[
             html.Div([
+            html.H3("火星の地表画像", style={
+                    "textAlign": "top", 
+                    "marginBottom": "10px", 
+                    "fontSize": "24px", 
+                    "fontWeight": "bold"
+            }),
+                html.Div([
+                    html.Span("NASAの火星探査車「Curiosity」が撮影した地表の画像です。", style={
+                        "display": "block",
+                        "fontWeight": "regular"
+                    }),
+                    html.Span("搭載されているNAVCAM（Navigation Camera）は、主に自律走行のために使われるモノクロカメラで、地形や岩石、地表の様子を詳細に捉えています。", style={
+                        "display": "block",
+                        "fontWeight": "regular"
+                    }),
+                ], style={
+                    "textAlign": "top", 
+                    "marginBottom": "10px", 
+                    "fontSize": "17px", 
+                }),
+
                 html.Div([
                     html.Label(
                         "📅 Select Observation Date", 
                         style={
                             "fontWeight": "bold", 
                             "marginRight": "10px",
-                            "fontSize": "16px"
+                            "fontSize": "20px"
                         }
                     ),
                     dcc.DatePickerSingle(
@@ -138,11 +184,11 @@ app.layout = html.Div([
                 ], style={
                     "display": "flex", 
                     "justifyContent": "center", 
+                    'textAlign': 'center',
                     "alignItems": "center"
                 })
             ], style={
-                'padding': '20px', 
-                'textAlign': 'center', 
+                'padding': '20px',  
                 'backgroundColor': '#f9f9f9',
                 'borderRadius': '10px'
             })
@@ -150,6 +196,19 @@ app.layout = html.Div([
 
         dcc.Tab(label='🔬 InSight Weather Data', children=[
             html.Div([
+                html.H3("🌤️ 最近の火星の天気", style={
+                        "textAlign": "top", 
+                        "marginBottom": "10px", 
+                        "fontSize": "24px", 
+                        "fontWeight": "bold"
+                }),
+                html.H3("NASAの火星探査機「InSight」が観測した気象データです。InSightは2018年11月に赤道付近のエリジウム平原に着陸し、気温・気圧・風速などを毎日観測しています。", style={
+                        "textAlign": "top", 
+                        "marginBottom": "10px", 
+                        "fontSize": "17px", 
+                        "fontWeight": "regular"
+                }),
+
                 # 横並びに2つのグラフを配置
                 html.Div([
                     dcc.Graph(id='temp-pressure-graph', style={
@@ -171,6 +230,18 @@ app.layout = html.Div([
 
         dcc.Tab(label='🌍 Global Temperature Maps', children=[
             html.Div([
+                html.H3("🌡 火星の気温", style={
+                        "textAlign": "top", 
+                        "marginBottom": "10px", 
+                        "fontSize": "24px", 
+                        "fontWeight": "bold"
+                }),
+                html.H3("地球に比べてとても寒いです。大気が非常に薄いため日中と夜の寒暖差が激しく、日中は0℃近くまで上昇することもありますが、夜間は−100℃以下まで冷え込みます。", style={
+                        "textAlign": "top", 
+                        "marginBottom": "10px", 
+                        "fontSize": "17px", 
+                        "fontWeight": "regular"
+                }),
                 # 横並びに全球分布を配置
                 html.Div([
                     html.Div([
@@ -220,6 +291,18 @@ app.layout = html.Div([
 
         dcc.Tab(label='🌍 Global Pressure Maps', children=[
             html.Div([
+                html.H3("🌀 火星の気圧", style={
+                        "textAlign": "top", 
+                        "marginBottom": "10px", 
+                        "fontSize": "24px", 
+                        "fontWeight": "bold"
+                }),
+                html.H3("火星の気圧は平均約600Paと、地球の約1%しかありません。大気の密度が非常に低いため、秒速数十メートルの風が吹いても、体に感じる圧力は弱いとされています。ただし、この風はダストを舞い上げる力があり、局地的な砂嵐の原因にもなります。", style={
+                        "textAlign": "top", 
+                        "marginBottom": "10px", 
+                        "fontSize": "17px", 
+                        "fontWeight": "regular"
+                }),
                 # 横並びに全球分布を配置
                 html.Div([
                     html.Div([
