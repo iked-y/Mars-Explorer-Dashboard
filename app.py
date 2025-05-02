@@ -15,7 +15,7 @@ ROVER_NAME = 'curiosity'
 # アプリ初期化
 app = dash.Dash(__name__)
 # app.title = "Mars Explorer Dashboard"
-app.title = "🚀 Mars Weather"
+app.title = "Mars Weather"
 # app.title = "What's the weather on Mars?"
 
 # 固定画像のbase64変換
@@ -37,6 +37,54 @@ app.layout = html.Div([
     }),
 
     dcc.Tabs([
+        dcc.Tab(label='🚀 About Mars', children=[
+            html.Div([
+                html.Div([
+                    html.Div([
+                        html.H4("Topography Map", style={
+                            "textAlign": "center", 
+                            "marginBottom": "10px", 
+                            "fontSize": "18px", 
+                            "fontWeight": "bold"
+                        }),
+                        html.Img(src=earth_img_tmp, style={
+                            'width': '95%', 
+                            'maxHeight': '40vh', 
+                            'objectFit': 'contain', 
+                            'border': '1px solid #ccc', 
+                            'padding': '10px', 
+                            'boxShadow': '0px 4px 8px rgba(0,0,0,0.2)'
+                        })
+                    ], style={"flex": "1", "marginRight": "10px"}),
+
+                    html.Div([
+                        html.H4("Mars", style={
+                            "textAlign": "center", 
+                            "marginBottom": "10px", 
+                            "fontSize": "18px", 
+                            "fontWeight": "bold"
+                        }),
+                        html.Img(src=mars_img_tmp, style={
+                            'width': '95%', 
+                            'maxHeight': '40vh', 
+                            'objectFit': 'contain', 
+                            'border': '1px solid #ccc', 
+                            'padding': '10px', 
+                            'boxShadow': '0px 4px 8px rgba(0,0,0,0.2)'
+                        })
+                    ], style={"flex": "1"})
+                ], style={
+                    "display": "flex", 
+                    "justifyContent": "space-between", 
+                    "alignItems": "center"
+                })
+            ], style={
+                'padding': '20px', 
+                'backgroundColor': '#f9f9f9', 
+                'borderRadius': '10px'
+            })
+        ]),
+        
         dcc.Tab(label='📸 Curiosity/NAVCAM Images', children=[
             html.Div([
                 html.Div([
