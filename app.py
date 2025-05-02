@@ -25,8 +25,10 @@ def encode_image(image_path):
 
 earth_img_tmp = encode_image("./data/earth_spring_temperature_with_topo.png")
 earth_img_p = encode_image("./data/earth_spring_mslp_with_topo.png")
+earth_img_topo = encode_image("./data/earth_topography_map.jpg")
 mars_img_tmp = encode_image("./data/mars_spring_temperature_with_geoh.png")
 mars_img_p = encode_image("./data/mars_spring_surface-pressure_areoid-corrected_with_geoh.png")
+mars_img_topo = encode_image("./data/mars_topography_map.jpg")
 
 app.layout = html.Div([
     html.H1("🌦️ Mars Weather", style={
@@ -47,7 +49,7 @@ app.layout = html.Div([
                             "fontSize": "18px", 
                             "fontWeight": "bold"
                         }),
-                        html.Img(src=earth_img_tmp, style={
+                        html.Img(src=earth_img_topo, style={
                             'width': '95%', 
                             'maxHeight': '40vh', 
                             'objectFit': 'contain', 
@@ -64,7 +66,7 @@ app.layout = html.Div([
                             "fontSize": "18px", 
                             "fontWeight": "bold"
                         }),
-                        html.Img(src=mars_img_tmp, style={
+                        html.Img(src=mars_img_topo, style={
                             'width': '95%', 
                             'maxHeight': '40vh', 
                             'objectFit': 'contain', 
