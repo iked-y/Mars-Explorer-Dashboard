@@ -1,4 +1,4 @@
-# 🚀 What's the weather on Mars?
+# 🚀 Mars Weather
 
 This is a Dash-based web application that visualizes Mars exploration data using NASA's public APIs and static planetary datasets.
 
@@ -13,6 +13,11 @@ This is a Dash-based web application that visualizes Mars exploration data using
 
 - Python 3.8+
 - See `requirements.txt` for package dependencies
+
+## References
+
+- Earth topography map https://visibleearth.nasa.gov/images/57752/blue-marble-land-surface-shallow-water-and-shaded-topography
+- Mars topography map https://www.jpl.nasa.gov/images/pia17357-nasas-mars-landing-sites-including-insight/
 
 ## ▶️ How to Run
 
