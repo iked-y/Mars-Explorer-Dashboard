@@ -15,7 +15,7 @@ ROVER_NAME = 'curiosity'
 # アプリ初期化
 app = dash.Dash(__name__)
 # app.title = "Mars Explorer Dashboard"
-app.title = "Mars Weather"
+app.title = "火星の天気"
 # app.title = "What's the weather on Mars?"
 
 # 固定画像のbase64変換
@@ -31,7 +31,7 @@ mars_img_p = encode_image("./data/mars_spring_surface-pressure_areoid-corrected_
 mars_img_topo = encode_image("./data/mars_topography_map.jpg")
 
 app.layout = html.Div([
-    html.H1("🌦️ Mars Weather", style={
+    html.H1("🌦️ 火星の天気", style={
         "textAlign": "center", 
         "padding": "20px", 
         "fontFamily": "Arial, sans-serif", 
@@ -121,7 +121,7 @@ app.layout = html.Div([
                     "fontWeight": "bold"
             }),
                 html.Div([
-                    html.Span("NASAの火星探査車「Curiosity」が撮影した地表の画像です。", style={
+                    html.Span("NASAの火星探査機「Curiosity」が撮影した地表の画像です。", style={
                         "display": "block",
                         "fontWeight": "regular"
                     }),
