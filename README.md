@@ -23,7 +23,7 @@ This is a Dash-based web application that visualizes Mars exploration data using
 
 ### 1. 環境を準備（Python 3.8以上を推奨）
 ```bash
-#### Clone the repository
+# Clone the repository
 git clone https://github.com/iked-y/mars-explorer-dashboard.git
 cd mars-explorer-dashboard
 
@@ -40,5 +40,5 @@ python app.py
 ```
 ### 3. ブラウザでアクセス
 ```bash
-表示されたURL（通常は http://127.0.0.1:8050/）を開くと、Webアプリが起動
+表示されたURLを開くと、Webアプリが起動
 ```
