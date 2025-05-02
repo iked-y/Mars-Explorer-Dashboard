@@ -22,18 +22,16 @@ This is a Dash-based web application that visualizes Mars exploration data using
 ## ▶︎ How to Run
 
 ### 1. 環境を準備（Python 3.8以上を推奨）
-#### Clone the repository
 ```bash
+#### Clone the repository
 git clone https://github.com/iked-y/mars-explorer-dashboard.git
 cd mars-explorer-dashboard
-```
-#### (Optional) Create a virtual environment
-```bash
+
+# (Optional) Create a virtual environment
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
-```
-#### Install dependencies
-```bash
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 ### 2. アプリを起動
