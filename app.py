@@ -380,7 +380,7 @@ def update_dashboard(selected_date):
     data = response.json()
 
     # デバッグ用: APIレスポンスを出力
-    print("API Response:", data)
+    # print("API Response:", data)
 
     photos = [p for p in data.get('photos', []) if p['camera']['name'] == 'NAV_LEFT_B']
 
@@ -412,7 +412,17 @@ def update_dashboard(selected_date):
     
     # --- InSight Weather データ取得 ---
     insight_url = f"https://api.nasa.gov/insight_weather/?api_key={API_KEY}&feedtype=json&ver=1.0"
-    insight_data = requests.get(insight_url).json()
+    # デバッグ用: APIレスポンスを出力
+    print("InSight API Response:", insight_url)
+    try:
+        insight_data = requests.get(insight_url).json()
+        # エラーメッセージの確認
+        if 'error' in insight_data:
+            print(f"API Error: {insight_data['error']}")
+    except Exception as e:
+        print(f"Request failed: {e}")
+    
+    # insight_data = requests.get(insight_url).json()
     sol_keys = sorted(insight_data.get('sol_keys', []), key=int)
 
     sols, temps, pressures, u_winds, v_winds, Spd, Dir = [], [], [], [], [], [], []
