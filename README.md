@@ -1,4 +1,4 @@
-# 🚀 Mars Weather
+# 🚀 Mars Weather Dashboard
 
 This is a Dash-based web application that visualizes Mars exploration data using NASA's public APIs and static planetary datasets.
 
@@ -16,8 +16,9 @@ This is a Dash-based web application that visualizes Mars exploration data using
 
 ## 🧑‍💻 References
 
-- Earth topography map https://visibleearth.nasa.gov/images/57752/blue-marble-land-surface-shallow-water-and-shaded-topography
-- Mars topography map https://www.jpl.nasa.gov/images/pia17357-nasas-mars-landing-sites-including-insight/
+- Earth topography map: https://visibleearth.nasa.gov/images/57752/blue-marble-land-surface-shallow-water-and-shaded-topography
+- Mars topography map: https://www.jpl.nasa.gov/images/pia17357-nasas-mars-landing-sites-including-insight/
+- Mars reanalysis dataset: https://www.datacommons.psu.edu/commonswizard/MetadataDisplay.aspx?Dataset=6171
 
 ## ▶︎ How to Run
 
@@ -36,7 +37,7 @@ pip install -r requirements.txt
 ```
 ### 2. アプリを起動
 ```bash
-python app.py
+python3 app.py
 ```
 ### 3. ブラウザでアクセス
 ```bash
